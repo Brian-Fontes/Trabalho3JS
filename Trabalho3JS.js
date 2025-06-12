@@ -78,7 +78,7 @@ function Ex4(){
     console.clear();
 
     do {
-        numero4 = parseInt(prompt("Digite um número: "));
+        numero4 = parseInt(prompt("Tente adivinhar o número anterior: "));
 
         if (numero4 !== numero3) {
             if (Math.abs(numero3 - numero4) <= 10) {
