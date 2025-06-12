@@ -71,24 +71,21 @@ function Ex3(){
 }
 
 function Ex4(){
-    let numero3 = parseInt(prompt("Digite um número"));
-    let numero4 = parseInt(prompt("Digite um número"));
+    let numero3 
+    let numero4
 
-    let numero1;
-    let numero2;
-
-    numero1 = parseInt(prompt("Digite um número: "));
+    numero3 = parseInt(prompt("Digite um número: "));
     console.clear();
 
     do {
-        numero2 = parseInt(prompt("Digite um número: "));
+        numero4 = parseInt(prompt("Digite um número: "));
 
-        if (numero2 !== numero1) {
-            if (Math.abs(numero1 - numero2) <= 10) {
-                console.log("Tá quente!");
+        if (numero4 !== numero3) {
+            if (Math.abs(numero3 - numero4) <= 10) {
+                alert("Tá quente!");
             } else {
-                console.log("Tá frio!");
+                alert("Tá frio!");
             }
         }
-    } while (numero2 !== numero1);
+    } while (numero4 !== numero3);
 }
