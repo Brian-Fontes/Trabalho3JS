@@ -89,3 +89,79 @@ function Ex4(){
         }
     } while (numero4 !== numero3);
 }
+
+function Ex5(){ 
+let login_correto = "Brian.Portella@aluno.senai.br";
+let senha_correta = "654321";
+let tentativas = 0;
+
+alert("Seja bem-vindo!");
+
+while (tentativas < 3) {
+    let login_digitado = prompt("Digite seu login:");
+    let senha_digitada = prompt("Insira sua senha:");
+
+    if (login_digitado === login_correto && senha_digitada === senha_correta) {
+        alert("Acesso permitido!");
+        break;
+    } else {
+        tentativas++;
+
+        if (login_digitado !== login_correto) {
+            alert("Login incorreto.");
+        }
+
+        if (senha_digitada !== senha_correta) {
+            alert("Senha incorreta.");
+        }
+
+        if (tentativas === 2) {
+            alert("Última tentativa, mais um erro e seu acesso será bloqueado!");
+        }
+
+        if (tentativas === 3) {
+            alert("Acesso bloqueado. Número de tentativas excedido.");
+        }
+    }
+}
+}
+
+function Ex6(){
+   let andares = parseInt(prompt("Digite o número de andares da pirâmide:"));
+
+for (let linha = 1; linha <= andares; linha++) {
+    let espacos = "";
+    let estrelas = "";
+
+    // Adiciona espaços
+    for (let i = 1; i <= andares - linha; i++) {
+        espacos += " ";
+    }
+
+    // Adiciona estrelas
+    for (let j = 1; j <= (2 * linha - 1); j++) {
+        estrelas += "*";
+    }
+
+    alert(espacos + estrelas);
+}
+}
+
+function Ex7(){
+     let altura = parseInt(prompt("Digite a altura do retângulo:"));
+let largura = parseInt(prompt("Digite a largura do retângulo:"));
+
+let resultado = "";
+
+for (let i = 0; i < altura; i++) {
+    let linha = "";
+
+    for (let j = 0; j < largura; j++) {
+        linha += "* ";
+    }
+
+    resultado += linha + "\n";
+}
+
+alert(resultado);
+}
